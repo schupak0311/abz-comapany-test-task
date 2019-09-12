@@ -1,0 +1,118 @@
+.registration {
+  &__form {
+    @media only screen and (max-width: 1024px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    &__button {
+      margin: 4rem auto;
+      width: 29rem;
+      height: 4rem;
+      border: none;
+      border-radius: 0.4rem;
+      box-shadow: 0 0.7rem 0.9rem rgba(0, 0, 0, 0.11);
+      background-color: #d7d7d7;
+      font-size: 2rem;
+      color: #8d8c8c;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+
+      @media only screen and (max-width: 600px) {
+        margin: 0 auto;
+        margin-top: -3rem;
+      }
+    }
+
+    &--1 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      @media only screen and (max-width: 1024px) {
+        display: grid;
+        grid-template-columns: repeat(3, 22rem);
+        grid-gap: 3rem;
+      }
+
+      @media only screen and (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5rem;
+        margin-bottom: -5rem;
+      }
+
+      &__input {
+        width: 25rem;
+        height: 5.8rem;
+
+        @media only screen and (max-width: 1024px) {
+          width: 22rem;
+          height: 5.6rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+          width: 29rem;
+          height: 6rem;
+        }
+      }
+    }
+
+    &--2 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      &__select {
+        width: 36rem;
+        border-radius: 0.4rem;
+        @media only screen and (max-width: 600px) {
+          width: 29rem;
+          margin-bottom: 1rem;
+        }
+      }
+
+      @media only screen and (max-width: 1024px) {
+        display: grid;
+        grid-template-columns: repeat(2, 34.5rem);
+        grid-gap: 2rem;
+        align-items: center;
+      }
+
+      @media only screen and (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: -2rem;
+      }
+    }
+
+    &__upload {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 40rem;
+
+      @media only screen and (max-width: 1024px) {
+        width: 33.5rem;
+      }
+
+      @media only screen and (max-width: 600px) {
+        width: 30rem;
+      }
+    }
+  }
+}

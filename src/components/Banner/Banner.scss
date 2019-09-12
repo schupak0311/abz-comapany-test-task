@@ -1,0 +1,157 @@
+.banner {
+  height: 70rem;
+  width: 100%;
+  background-image: url(../../assets/imgs/banner-bg/banner-bg-1204x723.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  margin-bottom: 5rem;
+
+  @media only screen and (min-width: 1118px) {
+    background-image: none;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    background-image: url(../../assets/imgs/banner-bg/banner-bg-768x622.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media only screen and (max-width: 600px) {
+    background-image: url(../../assets/imgs/banner-bg/banner-bg-320x393.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 45rem;
+  }
+
+  &__content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+
+    }
+  }
+}
+
+.background {
+  @media only screen and (min-width: 1118px) {
+    background-image: url(../../assets/imgs/banner-bg/banner-bg-2560x676.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.content-container {
+  height: 100%;
+  width: 50%;
+  margin: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  position: relative;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    position: static;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.heading {
+  width: 52.2rem;
+  font-size: 5rem;
+  line-height: 6rem;
+  color: #ffffff;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+
+  @media only screen and (max-width: 1024px) {
+    width: 43.3rem;
+    height: 15.3rem;
+    font-size: 4.2rem;
+    text-align: left;
+    line-height: 5rem;
+    margin-top: -2rem;
+    margin-left: 2rem;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 32rem;
+    font-size: 3rem;
+    line-height: 3.4rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: -8rem;
+  }
+}
+
+.text {
+  width: 44.9rem;
+  // height: 20.3rem;
+  // height: 20rem;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  color: #ffffff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  margin-top: 2rem;
+
+  @media only screen and (max-width: 1024px) {
+    width: 40rem;
+    height: 15.3rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-align: left;
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 29rem;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin: 0 auto;
+    margin-top: -2rem;
+    text-align: center;
+  }
+}
+
+.btn {
+  font-size: 2rem;
+  width: 30rem;
+  height: 4rem;
+  font-weight: 700;
+  border-radius: 0.4rem;
+  border: none;
+  background-color: #ef6c00;
+  color: #fefefe;
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 4rem;
+
+  a {
+    text-decoration: none;
+    color: #fefefe;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 28rem;
+    line-height: 2.2rem;
+    text-align: center;
+    margin-right: 1rem;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    margin-left: 2rem;
+  }
+}

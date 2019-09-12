@@ -1,0 +1,143 @@
+.mobile-nav {
+  @media only screen and (min-width: 1025px) {
+    display: none;
+  }
+}
+
+.toggle {
+  &__avatar {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 4rem;
+    background-color: #555555;
+    margin: 0 1.5rem;
+  }
+
+  &__nickname {
+    height: 2rem;
+    margin-left: auto;
+    padding: 1rem 0;
+    font-size: 2.2rem;
+    line-height: 6rem;
+    color: #000000;
+    font-family: "Source Sans Pro";
+    font-weight: 400;
+    margin-top: -3rem;
+    margin-bottom: 2rem;
+  }
+
+  &__email {
+    font-size: 1.6rem;
+    line-height: 6rem;
+    margin-left: auto;
+    color: #8d8c8c;
+    font-family: "Source Sans Pro";
+    font-weight: 400;
+  }
+}
+
+#menuToggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 2rem;
+  height: 5rem;
+  margin-top: 2rem;
+  z-index: 1;
+  display: none;
+
+  @media only screen and (max-width: 1024px) {
+    display: block;
+  }
+
+  -webkit-user-select: none;
+  user-select: none;
+
+  a {
+    color: #000000;
+  }
+}
+
+#menuToggle input {
+  display: block;
+  width: 4rem;
+  height: 3.2rem;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 3.3rem;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #cdcdcd;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 30rem;
+  height: 508.8vh;
+  top: -20px;
+  left: -95vw;
+  // margin: -6rem 0 0 -5rem;
+  padding: 5rem;
+  // padding-top: 8rem;
+  z-index: 100;
+  background: #ffffff;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 1rem 0;
+  font-size: 2.2rem;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}

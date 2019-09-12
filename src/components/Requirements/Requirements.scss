@@ -1,0 +1,110 @@
+.requirements {
+  height: 80rem;
+  width: 100%;
+  background-image: url(../../assets/imgs/third-block-bg/third-block-bg-1024x755.jpg);
+  background-repeat: no-repeat;
+  background-color: #283593;
+  background-size: cover;
+  overflow: hidden;
+
+  &__background {
+    background-image: url(../../assets/imgs/third-block-bg/third-block-bg-2560x692.jpg);
+    background-repeat: no-repeat;
+    background-color: #283593;
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media only screen and (min-width: 1118px) {
+    background-image: none;
+    background-color: transparent;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    background-image: url(../../assets/imgs/third-block-bg/third-block-bg-768x878.jpg);
+    background-repeat: no-repeat;
+    background-color: #283593;
+    background-size: cover;
+    width: 100%;
+    height: 90rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../assets/imgs/third-block-bg/third-block-bg-320x1031.jpg);
+    background-repeat: no-repeat;
+    background-color: #283593;
+    background-size: cover;
+    height: 110rem;
+  }
+
+  &__heading {
+    padding-top: 16rem;
+    padding-bottom: 12rem;
+    // width: 93rem;
+    height: 6.8rem;
+    font-size: 4.2rem;
+    color: #ffffff;
+    font-family: "Overpass";
+    font-weight: 600;
+    text-align: center;
+
+    @media only screen and (max-width: 600px) {
+      padding: 0;
+      margin-top: -2rem;
+      width: 29rem;
+      height: 6.8rem;
+      font-size: 2.6rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__content {
+    margin: 0 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-gap: 2rem;
+
+    &__text {
+      width: 45rem;
+      height: 41.7rem;
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      color: #fefefe;
+      font-family: "Source Sans Pro";
+      font-weight: 400;
+
+      &__paragraph {
+        margin-top: 1rem;
+      }
+      @media only screen and (max-width: 600px) {
+        width: 29rem;
+        height: auto;
+        text-align: center;
+        margin-top: 2rem;
+      }
+    }
+
+    &__image {
+
+      @media only screen and (max-width: 1024px) {
+        width: 30rem;
+      }
+      @media only screen and (max-width: 600px) {
+        width: 28rem;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
